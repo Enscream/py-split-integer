@@ -17,6 +17,8 @@ def test_should_return_part_equals_to_value_when_split_into_one_part() -> None:
 
 def test_parts_should_be_sorted_when_they_are_not_equal() -> None:
     result = split_integer(17, 4)
+
+    assert result == [4, 4, 4, 5]
     assert result == sorted(result)
 
 
@@ -46,6 +48,8 @@ def test_only_last_number_is_incremented() -> None:
 
 def test_difference_between_min_and_max_should_be_no_more_than_one() -> None:
     result = split_integer(17, 4)
+
+    assert result == [4, 4, 4, 5]
     assert max(result) - min(result) <= 1
 
 
